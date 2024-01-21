@@ -6,3 +6,4 @@ https://tailwindcss.com/docs/installation
 https://pixabay.com/es/music/metal-tell-us-green-man-127804/
 
 https://www.freepik.es/vector-gratis/logo-redondo-remolino-medio_40499945.htm#fromView=search&term=smoke+logo&track=ais&regularType=vector&page=1&position=0&uuid=45d4609f-b781-4900-b170-4e32526a83d8
+https://www.instagram.com/dannakasuna/?hl=es

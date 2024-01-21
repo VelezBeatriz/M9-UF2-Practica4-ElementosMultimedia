@@ -1,6 +1,16 @@
+/* Font Google */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-
+/* General style */
 body{
     font-family: 'Inter', sans-serif;
 }
+.backgroundImages{
+    background-color: black;
+    background-image: url("media/imgs/background.gif?text=Background"), url("media/imgs/background.jpg");
+    /* https://stackoverflow.com/questions/7816951/css-extra-background-image-for-when-the-first-image-doesnt-load */
+}
+
+#backgroundAudio {
+    display: none;
+  }

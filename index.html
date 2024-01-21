@@ -1,15 +1,15 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tu Proyecto</title>
+    <title>VelezBeatriz - M9: Elemento multimedia</title>
+    <!-- CDN Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- General Style -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body
-    class="bg-[url('media/imgs/background.jpg')] bg-no-repeat sm:bg-cover bg-auto">
+  <body class="backgroundImages bg-no-repeat sm:bg-cover bg-auto">
     <!-- START HEADER  -->
     <header class="bg-slate-950">
       <nav class="mx-auto flex tems-center justify-between p-4 lg:px-6">
@@ -23,12 +23,19 @@
     </header>
     <!-- END HEADER  -->
     <!-- START VIDEO -->
-    <section class="bg-black">
+    <section class="mb-8">
       <div class="container mx-auto p-8">
         <div class="border border-white p-4">
-          <video class="w-full" controls muted>
-            <source src="tu-video.mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
+          <video
+            id="finalVideo"
+            class="w-full"
+            preload="metadata"
+            controls
+            muted>
+            <source src="media/videos/video.mp4" type="video/mp4" />
+            <source src="media/videos/video.webm" type="video/webm" />
+            <img src="media/imgs/background.jpg" alt="Video no soportado" />
+            Tu navegador no soporta contenido multimedia.
           </video>
         </div>
         <div class="flex justify-center mt-8">
@@ -69,8 +76,14 @@
             >Ramón López</a
           >
           / Vídeo y edición:
-          <a href="https://filmora.wondershare.es/" class="underline"
-            >Filmora</a
+          <a
+            href="https://www.instagram.com/dannakasuna/?hl=es"
+            class="underline"
+            >Carolina Gabaldón</a
+          >
+          y
+          <a href="https://github.com/VelezBeatriz" class="underline"
+            >Beatriz Vélez</a
           >
           / Imágenes gráficas y música:
           <a href="https://pixabay.com/es/" class="underline">Pixabay</a> /
@@ -84,5 +97,26 @@
       </div>
     </footer>
     <!-- END FOOTER  -->
+    <!-- BACKGROUND AUDIO // Es posible que aparezca muteado -->
+    <audio id="backgroundAudio" preload="auto" autoplay loop>
+      <source src="media/audio/background-audio.mp3" type="audio/mp3" />
+      <source src="media/audio/background-audio.ogg" type="audio/ogg" />
+      <source src="media/audio/background-audio.flac" type="audio/flac" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <script>
+      const audio = document.getElementById("backgroundAudio");
+      audio.setAttribute("controls", "false");
+      audio.volume = 0.025;
+
+      //Se activa o desactiva según si da play o no al video
+      const video = document.getElementById("finalVideo");
+      video.addEventListener("play", function () {
+        audio.muted = true;
+      });
+      video.addEventListener("pause", function () {
+        audio.muted = false;
+      });
+    </script>
   </body>
 </html>
