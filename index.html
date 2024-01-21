@@ -1,98 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VelezBeatriz - M9: Elemento multimedia</title>
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- General Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VelezBeatriz - M9: Elemento multimedia</title>
-  <!-- CDN Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- General Style -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body class="backgroundImages bg-no-repeat sm:bg-cover bg-auto">
-  <!-- START HEADER  -->
-  <header class="bg-slate-950">
-    <nav class="mx-auto flex tems-center justify-between p-4 lg:px-6">
-      <div>
-        <a href="index.html" class="flex items-center space-x-2">
-          <img class="h-8 w-auto" src="media/imgs/logo.svg" alt="" />
-          <p class="text-white">Depressed Urban</p>
-        </a>
-      </div>
-    </nav>
-  </header>
-  <!-- END HEADER  -->
-  <!-- START VIDEO -->
-  <section class="mb-8">
-    <div class="container mx-auto p-8">
-      <div class="border border-white p-4">
-        <video id="finalVideo" class="w-full" preload="metadata" controls muted>
-          <source src="media/videos/video.mp4" type="video/mp4" />
-          <source src="media/videos/video.webm" type="video/webm" />
-          <img src="media/imgs/background.jpg" alt="Video no soportado" />
-          Tu navegador no soporta contenido multimedia.
-        </video>
-      </div>
-      <div class="flex justify-center mt-8">
-        <div class="mx-4">
-          <a href="enlace1.html" target="_blank">
-            <img src="media/imgs/youtube.png" alt="Logo Youtube" class="mb-2" width="50px" height="50px" />
+  <body class="backgroundImages bg-no-repeat sm:bg-cover bg-auto">
+    <!-- START HEADER  -->
+    <header class="bg-slate-950">
+      <nav class="mx-auto flex tems-center justify-between p-4 lg:px-6">
+        <div>
+          <a href="index.html" class="flex items-center space-x-2">
+            <img class="h-8 w-auto" src="media/imgs/logo.svg" alt="" />
+            <p class="text-white">Depressed Urban</p>
           </a>
         </div>
-        <div class="mx-4">
-          <a href="enlace2.html" target="_blank">
-            <img src="media/imgs/vimeo.png" alt="Logo Vimeo" class="mb-2" width="50px" height="50px" />
-          </a>
+      </nav>
+    </header>
+    <!-- END HEADER  -->
+    <!-- START VIDEO -->
+    <section class="mb-8">
+      <div class="container mx-auto p-8">
+        <div class="border border-white p-4">
+          <video
+            id="finalVideo"
+            class="w-full"
+            preload="metadata"
+            controls
+            muted>
+            <source src="media/videos/video.mp4" type="video/mp4" />
+            <source src="media/videos/video.webm" type="video/webm" />
+            <source src="media/videos/video.ogg" type="video/ogg" />
+            <img src="media/imgs/background.jpg" alt="Video no soportado" />
+            Tu navegador no soporta contenido multimedia.
+          </video>
+        </div>
+        <div class="flex justify-center mt-8">
+          <div class="mx-4">
+            <a href="enlace1.html" target="_blank">
+              <img
+                src="media/imgs/youtube.png"
+                alt="Logo Youtube"
+                class="mb-2"
+                width="50px"
+                height="50px" />
+            </a>
+          </div>
+          <div class="mx-4">
+            <a href="enlace2.html" target="_blank">
+              <img
+                src="media/imgs/vimeo.png"
+                alt="Logo Vimeo"
+                class="mb-2"
+                width="50px"
+                height="50px" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END VIDEO -->
-  <!-- START FOOTER  -->
-  <footer class="bg-slate-950 text-white p-4 lg:px-6 bottom-0 fixed w-full">
-    <div class="mx-auto">
-      <p>
-        &copy;
-        <a href="https://github.com/VelezBeatriz" class="underline">Beatriz Vélez</a>
-        / Actores:
-        <a href="https://github.com/daw2-Lopez23" class="underline">Ramón López</a>
-        / Vídeo y edición:
-        <a href="https://www.instagram.com/dannakasuna/?hl=es" class="underline">Carolina Gabaldón</a>
-        y
-        <a href="https://github.com/VelezBeatriz" class="underline">Beatriz Vélez</a>
-        / Imágenes gráficas y música:
-        <a href="https://pixabay.com/es/" class="underline">Pixabay</a> /
-        Logos de
-        <a href="https://www.freepik.es/autor/arrandera" class="underline">arrandera</a>
-        en
-        <a href="https://www.freepik.es/" class="underline">Freepik</a>
-      </p>
-    </div>
-  </footer>
-  <!-- END FOOTER  -->
-  <!-- BACKGROUND AUDIO // Es posible que aparezca muteado -->
-  <audio id="backgroundAudio" preload="auto" autoplay loop>
-    <source src="media/audio/background-audio.mp3" type="audio/mp3" />
-    <source src="media/audio/background-audio.ogg" type="audio/ogg" />
-    <source src="media/audio/background-audio.flac" type="audio/flac" />
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-  <script>
-    const audio = document.getElementById("backgroundAudio");
-    audio.setAttribute("controls", "false");
-    audio.volume = 0.025;
+    </section>
+    <!-- END VIDEO -->
+    <!-- START FOOTER  -->
+    <footer class="bg-slate-950 text-white p-4 lg:px-6 bottom-0 fixed w-full">
+      <div class="mx-auto">
+        <p>
+          &copy;
+          <a href="https://github.com/VelezBeatriz" class="underline"
+            >Beatriz Vélez</a
+          >
+          / Actores:
+          <a href="https://github.com/daw2-Lopez23" class="underline"
+            >Ramón López</a
+          >
+          / Vídeo y edición:
+          <a
+            href="https://www.instagram.com/dannakasuna/?hl=es"
+            class="underline"
+            >Carolina Gabaldón</a
+          >
+          y
+          <a href="https://github.com/VelezBeatriz" class="underline"
+            >Beatriz Vélez</a
+          >
+          / Imágenes gráficas y música:
+          <a href="https://pixabay.com/es/" class="underline">Pixabay</a> /
+          Logos de
+          <a href="https://www.freepik.es/autor/arrandera" class="underline"
+            >arrandera</a
+          >
+          en
+          <a href="https://www.freepik.es/" class="underline">Freepik</a>
+        </p>
+      </div>
+    </footer>
+    <!-- END FOOTER  -->
+    <!-- BACKGROUND AUDIO // Es posible que aparezca muteado -->
+    <audio id="backgroundAudio" preload="auto" autoplay loop>
+      <source src="media/audio/background-audio.mp3" type="audio/mp3" />
+      <source src="media/audio/background-audio.ogg" type="audio/ogg" />
+      <source src="media/audio/background-audio.flac" type="audio/flac" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <script>
+      const audio = document.getElementById("backgroundAudio");
+      audio.setAttribute("controls", "false");
+      audio.volume = 0.025;
 
-    //Se activa o desactiva según si da play o no al video
-    const video = document.getElementById("finalVideo");
-    video.addEventListener("play", function () {
-      audio.muted = true;
-    });
-    video.addEventListener("pause", function () {
-      audio.muted = false;
-    });
-  </script>
-</body>
-
+      //Se activa o desactiva según si da play o no al video
+      const video = document.getElementById("finalVideo");
+      video.addEventListener("play", function () {
+        audio.muted = true;
+      });
+      video.addEventListener("pause", function () {
+        audio.muted = false;
+      });
+    </script>
+  </body>
 </html>
