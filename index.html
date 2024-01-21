@@ -8,7 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[url('media/imgs/background.jpg')] bg-no-repeat bg-cover">
+  <body
+    class="bg-[url('media/imgs/background.jpg')] bg-no-repeat sm:bg-cover bg-auto">
     <!-- START HEADER  -->
     <header class="bg-slate-950">
       <nav class="mx-auto flex tems-center justify-between p-4 lg:px-6">
@@ -22,11 +23,43 @@
     </header>
     <!-- END HEADER  -->
     <!-- START VIDEO -->
+    <section class="bg-black">
+      <div class="container mx-auto p-8">
+        <div class="border border-white p-4">
+          <video class="w-full" controls muted>
+            <source src="tu-video.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+        <div class="flex justify-center mt-8">
+          <div class="mx-4">
+            <a href="enlace1.html" target="_blank">
+              <img
+                src="media/imgs/youtube.png"
+                alt="Logo Youtube"
+                class="mb-2"
+                width="50px"
+                height="50px" />
+            </a>
+          </div>
+          <div class="mx-4">
+            <a href="enlace2.html" target="_blank">
+              <img
+                src="media/imgs/vimeo.png"
+                alt="Logo Vimeo"
+                class="mb-2"
+                width="50px"
+                height="50px" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- END VIDEO -->
     <!-- START FOOTER  -->
-    <footer class="bg-slate-950 text-white p-4 absolute bottom-0 w-full">
+    <footer class="bg-slate-950 text-white p-4 lg:px-6 bottom-0 fixed w-full">
       <div class="container mx-auto">
-        <p class="mb-2">
+        <p>
           &copy;
           <a href="https://github.com/VelezBeatriz" class="underline"
             >Beatriz Vélez</a
